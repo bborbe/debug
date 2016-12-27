@@ -7,7 +7,7 @@ RUN locale-gen en_US.UTF-8
 RUN set -x \
 	&& DEBIAN_FRONTEND=noninteractive apt-get update --quiet \
 	&& DEBIAN_FRONTEND=noninteractive apt-get upgrade --quiet --yes \
-	&& DEBIAN_FRONTEND=noninteractive apt-get install --quiet --yes --no-install-recommends apt-transport-https ca-certificates openssh-server \
+	&& DEBIAN_FRONTEND=noninteractive apt-get install --quiet --yes --no-install-recommends apt-transport-https ca-certificates openssh-server bash curl wget screen mailutils postfix augeas-tools tmux vim net-tools iproute2 iputils-ping openssh-client mountall rsync nfs-common telnet dnsutils traceroute psmisc sysstat atop iotop bonnie++ \
 	&& DEBIAN_FRONTEND=noninteractive apt-get autoremove --yes \
 	&& DEBIAN_FRONTEND=noninteractive apt-get clean
 
