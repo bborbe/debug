@@ -1,4 +1,4 @@
-# Debug Dockerfile
+# Debug
 
 SSH-Server with debug tools
 
