@@ -1,16 +1,18 @@
+VERSION ?= 1.0.0
+
 default: build
 
 clean:
-	docker rmi bborbe/debug:latest
+	docker rmi bborbe/debug:$(VERSION)
 
 build:
-	docker build --no-cache --rm=true -t bborbe/debug:latest .
+	docker build --build-arg VERSION=$(VERSION) --no-cache --rm=true -t bborbe/debug:$(VERSION) .
 
 run:
-	docker run bborbe/debug:latest
+	docker run bborbe/debug:$(VERSION)
 
 shell:
-	docker run -i -t bborbe/debug:latest /bin/bash
+	docker run -i -t bborbe/debug:$(VERSION) /bin/bash
 
 upload:
-	docker push bborbe/debug
+	docker push bborbe/debug:$(VERSION)
