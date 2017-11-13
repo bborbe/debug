@@ -37,6 +37,8 @@ RUN set -x \
 	atop \
 	iotop \
 	bonnie++ \
+	file \
+	sudo \
 	&& DEBIAN_FRONTEND=noninteractive apt-get autoremove --yes \
 	&& DEBIAN_FRONTEND=noninteractive apt-get clean
 RUN locale-gen en_US.UTF-8
