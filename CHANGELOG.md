@@ -8,6 +8,11 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## 2.0.0
+
+- Update to 18.04
+- Don't start sshd
+
 ## 1.1.0
 
 - add file and sudo
