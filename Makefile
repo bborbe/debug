@@ -9,7 +9,7 @@ clean:
 	docker rmi $(REGISTRY)/bborbe/debug:$(VERSION)
 
 build:
-	docker build --build-arg VERSION=$(VERSION) --no-cache --rm=true -t $(REGISTRY)/bborbe/debug:$(VERSION) .
+	docker build --no-cache --rm=true -t $(REGISTRY)/bborbe/debug:$(VERSION) .
 
 run:
 	docker run $(REGISTRY)/bborbe/debug:$(VERSION)
